@@ -1,0 +1,115 @@
+{
+  "common": {
+    "label": {
+      "VIDEO": "Video",
+      "EVENT": "Event",
+      "NEWS": "News"
+    },
+    "HOME": "Home",
+    "LOG_IN": "Log in",
+    "SIGN_UP": "Sign up",
+    "SEARCH_PLACEHOLDER": "Type to search...",
+    "AT": "at",
+    "ORDER_FOOD": "Menu",
+    "ROOM_SERVICES": "Hotel services",
+    "CITY_DISCOVER": "City guide",
+    "WEATHER": "Weather",
+    "CITY_GUIDE": "City guide",
+    "ENTERTAINMENT": "Entertainment",
+    "NEWS": "News",
+    "WELCOME_TO": "Welcome to",
+    "NO_RESULT": "No result.",
+    "PHOTOS": "Photos",
+    "NO_INTERNET": "no internet connection",
+    "FEEDBACK": "Feedback",
+    "NO_ITEM": "No item.",
+    "EVENT": "EVENT",
+    "LOADING": "Loading",
+    "LOADING_DOT": "Loading...",
+    "DESCRIPTION": "Description"
+  },
+
+  "user": {
+    "PREFERENCES": "Preferences",
+    "LOGIN": "Log in",
+    "LOGOUT": "Log out",
+    "PROFILE": "Profile",
+    "LANGUAGE": "Language",
+    "LANGUAGE_DESC": "Choose your prefered language",
+    "NOTIFICATIONS": "Notifications",
+    "NOTIFICATIONS_DESC": "Notify me about updates to apps",
+    "AUTO_UPDATE": "Auto-updates",
+    "AUTO_UPDATE_DESC": "Auto-update apps over wifi only",
+    "CLEAR_HISTORY": "Clear search history",
+    "CLEAR_HISTORY_DESC": "Remove all the searches you have ever performed",
+    "ID_LABEL": "Email address",
+    "PASSWORD_LABEL": "Password",
+    "FORGOT_PASSWORD": "Forgot you password?"
+  },
+
+  "hotel": {
+    "INTRODUCTION": "Introduction",
+    "ROOM": "Room",
+    "SERVICE": "Service",
+    "OFFER": "Offer",
+    "GALLERY": "Gallery"
+  },
+
+  "media": {
+    "DESCRIPTION": "Description",
+    "RETRIEVING_DATA": "Retrieving media data..."
+  },
+
+  "city": {
+    "SEARCH_WITH": "Search with",
+    "RECOMMEND": "Recommend",
+    "SEARCH_LIST": "Search result",
+    "MY_LIST": "My list",
+    "ADDRESS": "Address",
+    "TIPS": "Tips",
+    "PROMOTED": "promoted",
+    "ADD_TO_MY_LIST": "Add to my list",
+    "REMOVE_FROM_MY_LIST": "Remove from my list",
+    "CALL_A_TAXI": "Call a taxi",
+    "GO_TO_MAP": "Go to map"
+  },
+
+  "event": {
+    "SEARCH_WITH": "Search with",
+    "UPCOMING": "Up coming",
+    "SEARCH_LIST": "Search result",
+    "MY_LIST": "My list",
+    "ADDRESS": "Address",
+    "TIPS": "Comments",
+    "ADD_TO_MY_LIST": "Add to my list",
+    "REMOVE_FROM_MY_LIST": "Remove from my list",
+    "CALL_A_TAXI": "Call a taxi"
+  },
+
+  "order": {
+    "ORDER_DETAIL": "Order detail",
+    "PROCEED": "Proceed",
+    "YOUR_ORDER": "Your order",
+    "NO_ITEM": "No item.",
+    "TOTAL": "Total",
+    "CONFIRM_MY_ORDER": "Confirm my order",
+    "ORDER_CONFIRMED_MSG": "Thank you! Your order will be delivered soon.",
+    "ORDER_ERROR_MSG": "Error! not create order",
+    "button": {
+      "ADD_ORDER": "Order"
+    }
+  },
+
+  "weather": {
+    "RETRIEVING_DATA": "Retrieving weather data...",
+    "UPCOMING_TODAY": "Upcoming today"
+  },
+
+  "news": {
+    "RETRIEVING_DATA": "Retrieving latest news..."
+  },
+
+  "feedback": {
+    "THANKS_FOR_FEEDBACK": "Thanks for your feedback!"
+  }
+}
