@@ -25,19 +25,19 @@
   <thead>
     <tr>
       <th class="col-md-1">#</th>
-      <th class="col-md-3">Keys({{data.items.source.length}})</th>
+      <th class="col-md-3">Keys({{data.finalJson.length}})</th>
       <th class="col-md-4">EN</th>
       <th class="col-md-4">Translation</th>
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="(key, value) in data.finalJson">
+    <tr ng-repeat="item in data.finalJson">
       <td>{{$index + 1}}</td>
-      <td class="text-muted">{{key}}</th>
-      <td><b>{{data.items.source[key]}}</b></td>
+      <td class="text-muted">{{item.key}}</th>
+      <td><b>{{item.en}}</b></td>
       <td>
-        <div class="form-group" ng-class="{'has-error': !value}">
-          <input type="text" class="form-control" ng-model="value" required>
+        <div class="form-group" ng-class="{'has-error': !item.translate}">
+          <input type="text" class="form-control" ng-model="item.translate" required>
         </div>
       </td>
     </tr>

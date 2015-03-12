@@ -18,6 +18,10 @@ angular.module('translatorApp')
       dest: {}
     };
     $scope.data.finalJson = {};
+    $scope.data.files = {
+      source: '',
+      dest: ''
+    }
 
     $scope.readFile = function (files, target) {
       var JsonObj = null,
@@ -28,6 +32,8 @@ angular.module('translatorApp')
       reader.onload = (function (theFile) {
         return function(e) {
           JsonObj = JSON.parse(e.target.result);
+
+          $scope.data.files[target] = theFile.name;
 
           // Do something fun
           _processData(JsonObj, target);
@@ -51,9 +57,13 @@ angular.module('translatorApp')
     }
 
     var _mergeTranslation = function(s, d) {
-      var result = {};
+      var result = [];
       angular.forEach(s, function(value, key) {
-        result[key] = d[key];
+        result.push({
+          key: key,
+          en: value,
+          translate: (angular.isUndefined(d[key])?'':d[key])
+        });
       })
 
       return result;
@@ -62,10 +72,10 @@ angular.module('translatorApp')
     $scope.exportJson = function() {
       var str = _convertToJsonData($scope.data.finalJson);
 
-      var uri = 'data:application/json;charset=utf-8,' + escape(str);
+      var uri = 'data:application/json;charset=utf-8,' + encodeURIComponent(str);
       var downloadLink = document.createElement("a");
       downloadLink.href = uri;
-      downloadLink.download = "data.json";
+      downloadLink.download = $scope.data.files.dest;
 
       document.body.appendChild(downloadLink);
       downloadLink.click();
@@ -74,28 +84,25 @@ angular.module('translatorApp')
 
     // TO-DO
     var _convertToJsonData = function(items) {
-      // var jsonObj = {};
-      // var index = -1;
+      var json = {};
 
-      // var _traverse2 = function (o) {
-      //   for (var i in o) {
+      angular.forEach(items, function(item) {
+        _assign(json, item.key.split('.'), item.translate);
+      })
 
-      //     if (typeof o[i] == 'string') {
-      //       index++;
+      return JSON.stringify(json, null, 2);
+    }
 
-      //     }
-
-      //     if (o[i] !== null && typeof(o[i]) == 'object') {
-      //       //going on step down in the object tree!!
-      //       _traverse2(o[i]);
-      //     }
-      //   }
-      // }  
-
-      // // _traverse2($scope.data.originalJson);   
-
-
-      return JSON.stringify(angular.copy(items), null, 2);
+    // src: http://stackoverflow.com/questions/5484673/javascript-how-to-dynamically-create-nested-objects-using-object-names-given-by
+    function _assign(obj, keyPath, value) {
+      var lastKeyIndex = keyPath.length - 1;
+      for (var i = 0; i < lastKeyIndex; ++ i) {
+        var key = keyPath[i];
+        if (!(key in obj))
+          obj[key] = {}
+          obj = obj[key];
+      }
+      obj[keyPath[lastKeyIndex]] = value;
     }
 
     //called with every property and it's value
