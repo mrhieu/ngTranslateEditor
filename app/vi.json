@@ -1,0 +1,167 @@
+{
+  "header": {
+    "notification": {
+      "TITLE": "Thông báo",
+      "NO_NEWS": "Không có thông báo mới",
+      "SEE_ALL": "Xem tất cả thông báo"
+    },
+    "nav_profile": {
+      "SETTINGS": "Tùy chỉnh",
+      "PROFILE": "Cá nhân",
+      "HELP": "Trợ giúp",
+      "LOGOUT": "Đăng xuất"
+    }
+    
+  },
+
+  "aside": {
+    "nav": {
+      "DASHBOARD": "Bảng tổng hợp",
+      "HOTEL": "Thông tin chung",
+      "HOTEL_BASIC": "Thông tin chính",
+      "HOTEL_INTRODUCTIONS": "Giới thiệu chi tiết",
+      "HOTEL_GALLERY": "Thư viện ảnh",
+      "MENU": "Menu",
+      "ORDER": "Order",
+      "ROOM": "Phòng",
+      "ROOM_PREFERENCES": "Tùy chỉnh phòng",
+      "ROOM_SERVICE": "Dịch vụ phòng",
+      "ROOM_KEEPER": "Phục vụ phòng",
+      "DEVICES": "Thiết bị",
+      "SETTINGS": "Tùy chỉnh"
+    }
+  },
+
+  "common": {
+    "button": {
+      "DELETE": "Xóa",
+      "SAVE_CHANGE": "Lưu thay đổi",
+      "SAVED": "Đã lưu",
+      "CLOSE": "Đóng",
+      "CANCEL": "Hủy thao tác",
+      "OK": "OK",
+      "LOGIN": "Đăng nhập",
+      "ADD": "Thêm"
+    },
+
+    "msg": {
+      "EMPTY": "Rỗng",
+      "DUPLICATE": "Thông tin lặp"
+    },
+
+    "label": {
+      "LOADING_DOT": "đang tải...",
+      "SAVING_DOT": "đang lưu...",
+      "SEARCH": "Tìm kiếm",
+      "NO_DATA": "Chưa có thông tin.",
+      "ADMIN_GREETING": "Đăng nhập cho quản lí",
+      "SELECT_LANGUAGE": "Ngôn ngữ",
+      "FORGOT_PASSWORD": "Quên mật khẩu?",
+      "SELECT_HOTEL": "Chọn khách sạn",
+      "GOTO_DASHBOARD": "Về trang tổng hợp",
+      "STATUS": "Trạng thái",
+      "COMING_SOON": "Đang hoàn thiện"
+    }
+  },
+
+  "settings": {
+    "tax": {
+      "TAX": "Thuế",
+      "label": {
+        "NAME": "Tên",
+        "AMOUNT": "Amount"
+      }
+    },
+    "discount": {
+      "DISCOUNT": "Giảm giá",
+      "label": {
+        "NAME": "Tên",
+        "AMOUNT": "Amount"
+      }
+    }
+  },
+
+  "dashboard": {
+    "TITLE": "Bảng tổng hợp",
+    "ORDER": "order(s)",
+    "REVENUE": "doanh thu",
+    "RECENT_ACTIVITY": "Hoạt động gần nhất"
+  },
+
+  "device": {
+    "TITLE": "Quản lí thiết bị",
+    "SEARCH_LABEL": "Tìm kiếm",
+    "DEVICE_ID": "Mã thiết bị",
+    "ROOM_NAME": "Tên phòng",
+    "STATUS": "Trạng thái",
+    "ASSIGN": "gắn vào phòng..."
+  },
+
+  "dishes": {
+    "TITLE": "Thực đơn",
+    "form_label": {
+      "DESCRIPTION": "Mô tả",
+      "FOOD_OPTIONS": "Tùy chọn thêm",
+      "AVAILABILITY": "Giờ phục vụ",
+      "AVAILABILITY_DESC": "để trống nếu món ăn không giới hạn giờ phục vụ",
+      "UPSELLING": "Up selling",
+      "SELECTED": "món được chọn",
+      "ALL_ITEMS": "Danh sách tất cả món ăn",
+      "SEARCH": "Tìm kiếm"
+    },
+    "button": {
+
+    }
+  },
+
+  "orders": {
+    "header": {
+      "TITLE": "Quản lí order"
+    },
+    "label": {
+      "SEARCH": "Tìm kiếm",
+      "ORDER_NO": "Mã order",
+      "ROOM_NO": "Số/tên phòng",
+      "ORDER_ITEMS": "Chi tiết order",
+      "CUSTOMER_NOTE": "Yêu cầu khách",
+      "WAITER_NOTE": "Lưu ý (waiter)",
+      "STATUS": "Trạng thái",
+      "WITH_OPTION": "tùy chọn riêng",
+      "ROOM": "Phòng"
+    }
+  },
+
+  "room": {
+    "header": {
+      "ROOM_SERVICE": "Dịch vụ phòng",
+      "PREFERENCES": "Tùy chỉnh phòng",
+      "KEEPER": "Phục vụ phòng"
+    }
+  },
+
+  "files": {
+    "TITLE": "Quản lí file",
+    "button": {
+      "ADD_FILE": "Thêm file"
+    }
+  },
+
+  "hotel": {
+    "header": {
+      "GALLERY": "Thư viện ảnh",
+      "BASIC": "Thông tin chung",
+      "INTRO": "Giới thiệu chi tiết"
+    },
+    "label": {
+      "CAPTION_PLACEHOLDER": "Chú thích...",
+      "LOGO": "Logo",
+      "BACKGROUND": "Background",
+      "NAME": "Tên",
+      "NAME_DESC": "Tên sẽ được hiển thị trong các ứng dụng",
+      "CONTENT": "Nội dung",
+      "TITLE": "Tiêu đề",
+      "TITLE_DESC": "Sẽ được hiển thị dưới dạng tên của các tile"
+    }
+  }
+
+}

@@ -1,115 +1,271 @@
 {
-  "common": {
-    "label": {
-      "VIDEO": "Video",
-      "EVENT": "Event",
-      "NEWS": "News"
+  "header": {
+    "notification": {
+      "TITLE": "Notifications",
+      "NO_NEWS": "You have no notifications",
+      "SEE_ALL": "See all the notifications"
     },
-    "HOME": "Home",
-    "LOG_IN": "Log in",
-    "SIGN_UP": "Sign up",
-    "SEARCH_PLACEHOLDER": "Type to search...",
-    "AT": "at",
-    "ORDER_FOOD": "Menu",
-    "ROOM_SERVICES": "Hotel services",
-    "CITY_DISCOVER": "City guide",
-    "WEATHER": "Weather",
-    "CITY_GUIDE": "City guide",
-    "ENTERTAINMENT": "Entertainment",
-    "NEWS": "News",
-    "WELCOME_TO": "Welcome to",
-    "NO_RESULT": "No result.",
-    "PHOTOS": "Photos",
-    "NO_INTERNET": "no internet connection",
-    "FEEDBACK": "Feedback",
-    "NO_ITEM": "No item.",
-    "EVENT": "EVENT",
-    "LOADING": "Loading",
-    "LOADING_DOT": "Loading...",
-    "DESCRIPTION": "Description"
+    "nav_profile": {
+      "SETTINGS": "Settings",
+      "PROFILE": "Profile",
+      "HELP": "Help",
+      "LOGOUT": "Logout"
+    }
+    
   },
 
-  "user": {
-    "PREFERENCES": "Preferences",
-    "LOGIN": "Log in",
-    "LOGOUT": "Log out",
-    "PROFILE": "Profile",
-    "LANGUAGE": "Language",
-    "LANGUAGE_DESC": "Choose your prefered language",
-    "NOTIFICATIONS": "Notifications",
-    "NOTIFICATIONS_DESC": "Notify me about updates to apps",
-    "AUTO_UPDATE": "Auto-updates",
-    "AUTO_UPDATE_DESC": "Auto-update apps over wifi only",
-    "CLEAR_HISTORY": "Clear search history",
-    "CLEAR_HISTORY_DESC": "Remove all the searches you have ever performed",
-    "ID_LABEL": "Email address",
-    "PASSWORD_LABEL": "Password",
-    "FORGOT_PASSWORD": "Forgot you password?"
-  },
-
-  "hotel": {
-    "INTRODUCTION": "Introduction",
-    "ROOM": "Room",
-    "SERVICE": "Service",
-    "OFFER": "Offer",
-    "GALLERY": "Gallery"
-  },
-
-  "media": {
-    "DESCRIPTION": "Description",
-    "RETRIEVING_DATA": "Retrieving media data..."
-  },
-
-  "city": {
-    "SEARCH_WITH": "Search with",
-    "RECOMMEND": "Recommend",
-    "SEARCH_LIST": "Search result",
-    "MY_LIST": "My list",
-    "ADDRESS": "Address",
-    "TIPS": "Tips",
-    "PROMOTED": "promoted",
-    "ADD_TO_MY_LIST": "Add to my list",
-    "REMOVE_FROM_MY_LIST": "Remove from my list",
-    "CALL_A_TAXI": "Call a taxi",
-    "GO_TO_MAP": "Go to map"
-  },
-
-  "event": {
-    "SEARCH_WITH": "Search with",
-    "UPCOMING": "Up coming",
-    "SEARCH_LIST": "Search result",
-    "MY_LIST": "My list",
-    "ADDRESS": "Address",
-    "TIPS": "Comments",
-    "ADD_TO_MY_LIST": "Add to my list",
-    "REMOVE_FROM_MY_LIST": "Remove from my list",
-    "CALL_A_TAXI": "Call a taxi"
-  },
-
-  "order": {
-    "ORDER_DETAIL": "Order detail",
-    "PROCEED": "Proceed",
-    "YOUR_ORDER": "Your order",
-    "NO_ITEM": "No item.",
-    "TOTAL": "Total",
-    "CONFIRM_MY_ORDER": "Confirm my order",
-    "ORDER_CONFIRMED_MSG": "Thank you! Your order will be delivered soon.",
-    "ORDER_ERROR_MSG": "Error! not create order",
-    "button": {
-      "ADD_ORDER": "Order"
+  "aside": {
+    "nav": {
+      "DASHBOARD": "Dashboard",
+      "HOTEL": "Information",
+      "HOTEL_BASIC": "Basic",
+      "HOTEL_INTRODUCTIONS": "Introductions",
+      "HOTEL_GALLERY": "Gallery",
+      "MENU": "Menu",
+      "ORDER": "Order",
+      "ROOM": "Room",
+      "ROOM_PREFERENCES": "Preferences",
+      "ROOM_SERVICE": "Service",
+      "ROOM_KEEPER": "Keeper",
+      "DEVICES": "Devices",
+      "SETTINGS": "Settings",
+      "INVENTORY": "Inventory",
+      "DISHES": "Dishes",
+      "SETS": "Sets",
+      "STAFF": "Staff",
+      "MANAGEMENT": "Management",
+      "RECORDS": "Records",
+      "TAX_DISCOUNT": "Tax & Discount",
+      "ROOM_TABLE": "Tables"
     }
   },
 
-  "weather": {
-    "RETRIEVING_DATA": "Retrieving weather data...",
-    "UPCOMING_TODAY": "Upcoming today"
+  "common": {
+    "button": {
+      "DELETE": "Delete",
+      "SAVE_CHANGE": "Save",
+      "SAVED": "Saved",
+      "CLOSE": "Close",
+      "CANCEL": "Cancel",
+      "OK": "OK",
+      "LOGIN": "Log in",
+      "ADD": "Add",
+      "REMOVE": "Remove",
+      "BACK": "Back"
+    },
+
+    "msg": {
+      "EMPTY": "Empty",
+      "DUPLICATE": "Duplicated value"
+    },
+
+    "label": {
+      "LOADING_DOT": "loading...",
+      "SAVING_DOT": "Saving...",
+      "SEARCH": "Search",
+      "NO_DATA": "No data.",
+      "ADMIN_GREETING": "Hotel Administrator login",
+      "SELECT_LANGUAGE": "Language",
+      "FORGOT_PASSWORD": "Forgot password?",
+      "SELECT_HOTEL": "Select hotel",
+      "GOTO_DASHBOARD": "Go to dashboard",
+      "STATUS": "Status",
+      "COMING_SOON": "Coming soon",
+      "SHOW": "Show",
+      "MULTI_CHOICE": "Multiple choice",
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "ROLE": "Role",
+      "ALL": "All"
+    }
   },
 
-  "news": {
-    "RETRIEVING_DATA": "Retrieving latest news..."
+  "settings": {
+    "tax": {
+      "TAX": "Tax",
+      "label": {
+        "NAME": "Tax name",
+        "AMOUNT": "Amount"
+      }
+    },
+    "discount": {
+      "DISCOUNT": "Discount",
+      "label": {
+        "NAME": "Discount name",
+        "AMOUNT": "Amount"
+      }
+    }
   },
 
-  "feedback": {
-    "THANKS_FOR_FEEDBACK": "Thanks for your feedback!"
+  "dashboard": {
+    "label": {
+      "DASHBOARD": "Dashboard",
+      "ORDER": "order(s)",
+      "REVENUE": "revenue",
+      "RECENT_ACTIVITY": "Recent Activity",
+      "SALE_COMPARISON": "Sale comparison",
+      "SALE_AMOUNT": "Sale amount",
+      "PENDING_ORDER": "Pending order(s)",
+      "HOTTAB_GUEST": "HotTab guest(s)",
+      "ITEMS": "Item(s)",
+      "TODAY": "Today",
+      "HOURLY": "Hourly",
+      "DAILY": "Daily",
+      "MONTHLY": "Monthly",
+      "ORDER_VS": "Order vs Order average size"
+    },
+    "button": {
+      
+    }
+  },
+
+  "device": {
+    "TITLE": "Device Management",
+    "SEARCH_LABEL": "Search",
+    "DEVICE_ID": "Device ID",
+    "ROOM_NAME": "Room name",
+    "STATUS": "Status",
+    "ASSIGN": "assign now..."
+  },
+
+  "device_ref": {
+    "label": {
+      "TITLE": "Tables list",
+      "ROOM_NAME": "Room name",
+      "ROOM_CATEGORY": "Room category"
+    },
+    "button": {},
+    "message": {}
+  },
+
+  "dishes": {
+    "label": {
+      "DISHES": "Dishes",
+      "SETS": "Food sets",
+      "SET_PLACEHOLDER": "Set's name",
+      "SET_PRICE_PLACEHOLDER": "Set's price",
+      "NAME_PLACEHOLDER": "Food name",
+      "PRICE_PLACEHOLDER": "Food price",
+      "DESCRIPTION_PLACEHOLDER": "Enter description",
+      "FOOD_SET_PICKER": "Set items",
+      "FOOD_SET_SELECTED": "Selected items",
+      "SHOW": "Show in menu",
+      "DISCOUNT": "Discount",
+      "ITEMS_SELECTED": "{{count}} items selected",
+      "CHOOSE_CATEGORY": "Choose category",
+      "TAG_PLACEHOLDER": "Sub category"
+    },
+    "TITLE": "Menu",
+    "form_label": {
+      "DESCRIPTION": "Description",
+      "FOOD_OPTIONS": "Food options",
+      "AVAILABILITY": "Availability",
+      "AVAILABILITY_DESC": "leave it blank for all time availability",
+      "UPSELLING": "Up selling",
+      "SELECTED": "selected",
+      "ALL_ITEMS": "All items",
+      "SEARCH": "Search"
+    },
+    "button": {
+
+    }
+  },
+
+  "orders": {
+    "header": {
+      "TITLE": "Order management"
+    },
+    "label": {
+      "SEARCH": "Search",
+      "ORDER_NO": "Order.No",
+      "ROOM_NO": "Room.No",
+      "ORDER_ITEMS": "Ordered Items",
+      "CUSTOMER_NOTE": "Customer note",
+      "WAITER_NOTE": "Waiter note",
+      "STATUS": "Status",
+      "WITH_OPTION": "with options",
+      "ROOM": "Room",
+      "TIME": "Time",
+      "STAFF_NAME": "Staff name",
+      "ITEMS": "Items",
+      "ORDER": "Order"
+    }
+  },
+
+  "room": {
+    "header": {
+      "ROOM_SERVICE": "Service Management",
+      "PREFERENCES": "Room Preferences",
+      "KEEPER": "Room Service Orders"
+    },
+    "label": {
+      "ROOM_SERVICE": "Service Management",
+      "PREFERENCES": "Room Preferences",
+      "KEEPER": "Room Service Orders",
+      "DESCRIPTION": "Description",
+      "OPTIONS": "Service options",
+      "AVAILABILITY": "Availability",
+      "AVAILABILITY_DESC": "leave it blank for all time availability",
+      "UPSELLING": "Up selling",
+      "SELECTED": "selected",
+      "ALL_ITEMS": "All items",
+      "SEARCH": "Search",
+      "NAME_PLACEHOLDER": "Service name",
+      "PRICE_PLACEHOLDER": "Service price",
+      "DESCRIPTION_PLACEHOLDER": "Enter description"
+    }
+  },
+
+  "files": {
+    "TITLE": "File Manager",
+    "button": {
+      "ADD_FILE": "Add file(s)"
+    }
+  },
+
+  "hotel": {
+    "header": {
+      "GALLERY": "Gallery",
+      "BASIC": "Basic Information",
+      "INTRO": "Introductions"
+    },
+    "label": {
+      "CAPTION_PLACEHOLDER": "Caption...",
+      "LOGO": "Logo",
+      "BACKGROUND": "Background",
+      "NAME": "Name",
+      "NAME_DESC": "Display as hotel's name throughout the app",
+      "CONTENT": "Content",
+      "TITLE": "Title",
+      "TITLE_DESC": "Display as name of the tile"
+    }
+  },
+
+  "inventory": {
+    "label": {
+      "INVENTORY": "Inventory",
+      "INGREDIENT": "Ingredient",
+      "NAME": "Name",
+      "AMOUNT": "Amount",
+      "UNIT": "Unit",
+      "PRICE": "Price",
+      "QUANTITY": "Quantity",
+      "COST": "Cost",
+      "TOTAL": "Total",
+      "DESCRIPTION": "Description",
+      "TIME": "Time"
+    },
+    "button": {},
+    "msg": {}
+  },
+
+  "staff": {
+    "label": {
+      "STAFF_MANAGEMENT": "Staff Management",
+      "FIRST_NAME": "First name",
+      "LAST_NAME": "Last name",
+      "PASSWORD": "Password"
+    }
   }
+
 }

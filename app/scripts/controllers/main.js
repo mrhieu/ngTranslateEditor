@@ -9,11 +9,17 @@
  */
 angular.module('translatorApp')
   .controller('MainCtrl', function ($scope, $http) {
-    $scope.data = {};
-    $scope.data.originalJson = null;
-    $scope.data.items = [];
+    var _path = [];
 
-    $scope.readFile = function (files) {
+    $scope.data = {};
+    // $scope.data.originalJson = null;
+    $scope.data.items = {
+      source: {},
+      dest: {}
+    };
+    $scope.data.finalJson = {};
+
+    $scope.readFile = function (files, target) {
       var JsonObj = null,
           f = files[0],
           reader = new FileReader();
@@ -24,8 +30,14 @@ angular.module('translatorApp')
           JsonObj = JSON.parse(e.target.result);
 
           // Do something fun
-          $scope.data.originalJson = JsonObj;
-          _processData(JsonObj);
+          _processData(JsonObj, target);
+
+          // If 2 files imported, start to do the most interesting thing
+          if (!angular.equals($scope.data.items.source, {}) && !angular.equals($scope.data.items.dest, {})) {
+            $scope.$apply(function() {
+              $scope.data.finalJson = _mergeTranslation($scope.data.items.source, $scope.data.items.dest);
+            });
+          }
         };
       })(f);
 
@@ -33,13 +45,22 @@ angular.module('translatorApp')
       reader.readAsText(f);
     }
 
-    var _processData = function(jsonObj) {
-      $scope.data.items = [];
-      _traverse(jsonObj,log);
+    var _processData = function(jsonObj, target) {
+      $scope.data.items[target] = {};
+      _traverse(jsonObj, _log, target);
+    }
+
+    var _mergeTranslation = function(s, d) {
+      var result = {};
+      angular.forEach(s, function(value, key) {
+        result[key] = d[key];
+      })
+
+      return result;
     }
 
     $scope.exportJson = function() {
-      var str = _convertToJsonData($scope.data.items);
+      var str = _convertToJsonData($scope.data.finalJson);
 
       var uri = 'data:application/json;charset=utf-8,' + escape(str);
       var downloadLink = document.createElement("a");
@@ -53,70 +74,68 @@ angular.module('translatorApp')
 
     // TO-DO
     var _convertToJsonData = function(items) {
-      var jsonObj = {};
-      var index = -1;
+      // var jsonObj = {};
+      // var index = -1;
 
-      var _traverse2 = function (o) {
-        for (var i in o) {
+      // var _traverse2 = function (o) {
+      //   for (var i in o) {
 
-          if (typeof o[i] == 'string') {
-            index++;
+      //     if (typeof o[i] == 'string') {
+      //       index++;
 
-          }
+      //     }
 
-          if (o[i] !== null && typeof(o[i]) == 'object') {
-            //going on step down in the object tree!!
-            _traverse2(o[i]);
-          }
-        }
-      }  
+      //     if (o[i] !== null && typeof(o[i]) == 'object') {
+      //       //going on step down in the object tree!!
+      //       _traverse2(o[i]);
+      //     }
+      //   }
+      // }  
 
-      _traverse2($scope.data.originalJson);   
+      // // _traverse2($scope.data.originalJson);   
 
 
       return JSON.stringify(angular.copy(items), null, 2);
     }
 
     //called with every property and it's value
-    function log(key, value) {
+    function _log(key, value, target) {
       if (typeof value === 'string') {
-        console.log(key + " : " + value);
-
-        if (path.length) {
-          key = path.join('.') + '.' + key;
+        if (_path.length) {
+          key = _path.join('.') + '.' + key;
         }
 
-        $scope.data.items.push({
-          key: key,
-          en: value,
-          translate: value
-        });
+        // console.log(key + " : " + value);
+        $scope.data.items[target][key] = value;
       }
     }
-
-    var path = [];
-    var _traverse = function (o, func) {
+    
+    var _traverse = function (o, callback, target) {
       for (var i in o) {
-
-        func.apply(this, [i, o[i]]);
+        callback.apply(this, [i, o[i], target]);
 
         if (o[i] !== null && typeof(o[i]) == 'object') {
-          path.push(i);
+          _path.push(i);
           //going on step down in the object tree!!
-          _traverse(o[i], func);
-          path.splice(path.length - 1, 1);
+          _traverse(o[i], callback, target);
+          _path.splice(_path.length - 1, 1);
         }
       }
     }
 
+    var _deep_value = function(obj, _path){
+      for (var i=0, _path=_path.split('.'), len=_path.length; i<len; i++){
+        obj = obj[_path[i]];
+      };
+      return obj;
+    };
+
     var _init = function() {
+      // Test with the intial json file
       $http.get('en.json')
         .then(function (response) {
-          $scope.data.items = [];
-          $scope.data.originalJson = response.data;
-          _traverse(response.data, log);
+          _traverse(response.data, _log, 'source');
         })
     }
-    _init();
-    
+    // _init();
   });
