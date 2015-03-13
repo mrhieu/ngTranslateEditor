@@ -1,7 +1,9 @@
 {
   "name": "translator",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "grunt-build-control": "^0.3.0"
+  },
   "repository": {},
   "devDependencies": {
     "grunt": "^0.4.5",
