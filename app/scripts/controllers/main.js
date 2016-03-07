@@ -1,11 +1,14 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name translatorApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the translatorApp
+ 
+Synchronize and merge the tranlated text from 2 json files
+1. Flatten the nested Object in to 1-key-value layer
+2. Merge the 2 object. Take all the KEYs from the source file then fill up all the respective VALUEs taken from the 
+dest file. If there is any KEYs insufficent, leave it blank for the editor to submit
+3. Export the merged file into JSON file.
+4. Cheers.
+
  */
 angular.module('translatorApp')
   .controller('MainCtrl', function ($scope, $http) {
