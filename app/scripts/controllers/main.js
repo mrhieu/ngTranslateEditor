@@ -25,6 +25,7 @@ angular.module('translatorApp')
       source: '',
       dest: ''
     }
+    $scope.data.disableDownload = true;
 
     $scope.readFile = function (files, target) {
       var JsonObj = null,
@@ -45,6 +46,7 @@ angular.module('translatorApp')
           if (!angular.equals($scope.data.items.source, {}) && !angular.equals($scope.data.items.dest, {})) {
             $scope.$apply(function() {
               $scope.data.finalJson = _mergeTranslation($scope.data.items.source, $scope.data.items.dest);
+              $scope.data.disableDownload = false;
             });
           }
         };
@@ -139,13 +141,4 @@ angular.module('translatorApp')
       };
       return obj;
     };
-
-    var _init = function() {
-      // Test with the intial json file
-      $http.get('en.json')
-        .then(function (response) {
-          _traverse(response.data, _log, 'source');
-        })
-    }
-    // _init();
   });

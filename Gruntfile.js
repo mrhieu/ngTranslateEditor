@@ -427,6 +427,13 @@ module.exports = function (grunt) {
           branch: 'master'
         }
       }
+    },
+
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**']
     }
   });
 
