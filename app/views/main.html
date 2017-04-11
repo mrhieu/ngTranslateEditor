@@ -9,7 +9,7 @@
 
   <div class="col-md-6">
     <div class="form-group">
-      <h4 for="exampleInputFile">2 - Dest file</h4>
+      <h4 for="exampleInputFile">2 - Destination file</h4>
       <input type="file" onchange="angular.element(this).scope().readFile(this.files, 'dest')">
       <p class="help-block">e.g fr.json</p>
     </div>
@@ -29,7 +29,7 @@
   <tbody>
     <tr ng-repeat="item in data.finalJson">
       <td>{{$index + 1}}</td>
-      <td class="text-muted">{{item.key}}</th>
+      <td class="text-muted">{{item.key}}</td>
       <td><b>{{item.en}}</b></td>
       <td>
         <div class="form-group" ng-class="{'has-error': !item.translate}">
