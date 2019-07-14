@@ -105,8 +105,8 @@ angular.module('translatorApp')
         var key = keyPath[i];
         if (!(key in obj)) {
           obj[key] = {};
-          obj = obj[key];
         }
+        obj = obj[key];
       }
       obj[keyPath[lastKeyIndex]] = value;
     }
